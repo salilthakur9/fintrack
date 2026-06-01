@@ -1,34 +1,36 @@
 import { motion } from "framer-motion";
+import { FaWallet } from "react-icons/fa";
 
 const WalletCard = () => {
   return (
     <motion.div
-      whileHover={{
-        scale: 1.02,
-      }}
+      whileHover={{ scale: 1.01 }}
       className="
-      relative
-      overflow-hidden
-      rounded-3xl
+      bg-zinc-950
       border
       border-zinc-800
-      bg-zinc-950
-      p-8
+      rounded-3xl
+      p-6
+      flex
+      justify-between
+      items-center
       "
     >
-      <div className="absolute -top-20 -right-20 h-52 w-52 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div>
+        <p className="text-zinc-500">
+          Current Balance
+        </p>
 
-      <p className="text-zinc-500">
-        Current Wallet
-      </p>
+        <h1 className="text-4xl font-bold text-cyan-400 mt-2">
+          ₹25,000
+        </h1>
 
-      <h1 className="text-5xl font-bold text-cyan-400 mt-3">
-        ₹25,000
-      </h1>
+        <p className="text-emerald-500 mt-2">
+          +12% this month
+        </p>
+      </div>
 
-      <p className="text-emerald-500 mt-4">
-        +12% this month
-      </p>
+      <FaWallet className="text-cyan-400 text-5xl opacity-40" />
     </motion.div>
   );
 };

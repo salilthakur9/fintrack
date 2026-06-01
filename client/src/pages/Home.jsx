@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import WalletCard from "../components/WalletCard";
 import StatsCards from "../components/StatsCards";
 import RecentTransactions from "../components/RecentTransactions";
+import SavingsGoal from "../components/SavingsGoal";
 
 const Home = () => {
   return (
@@ -11,6 +12,8 @@ const Home = () => {
       <WalletCard />
 
       <StatsCards />
+
+      <SavingsGoal />
 
       <RecentTransactions />
     </main>

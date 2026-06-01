@@ -20,27 +20,19 @@ const cards = [
 
 const StatsCards = () => {
   return (
-    <div className="grid md:grid-cols-3 gap-5 mt-6">
+    <div className="grid md:grid-cols-3 gap-4 mt-4">
       {cards.map((card) => (
         <motion.div
           key={card.title}
-          whileHover={{
-            y: -5,
-          }}
-          className="
-          bg-zinc-950
-          border
-          border-zinc-800
-          rounded-3xl
-          p-6
-          "
+          whileHover={{ y: -4 }}
+          className="bg-zinc-950 border border-zinc-800 rounded-2xl p-5"
         >
-          <p className="text-zinc-500">
+          <p className="text-zinc-500 text-sm">
             {card.title}
           </p>
 
           <h2
-            className={`text-4xl font-bold mt-3 ${card.color}`}
+            className={`text-3xl font-bold mt-2 ${card.color}`}
           >
             {card.amount}
           </h2>
