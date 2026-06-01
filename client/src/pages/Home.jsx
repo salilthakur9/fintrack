@@ -1,22 +1,33 @@
 import Hero from "../components/Hero";
 import WalletCard from "../components/WalletCard";
 import StatsCards from "../components/StatsCards";
-import RecentTransactions from "../components/RecentTransactions";
 import SavingsGoal from "../components/SavingsGoal";
+import RecentTransactions from "../components/RecentTransactions";
+import ExpenseChart from "../components/ExpenseChart";
+import FloatingButton from "../components/FloatingButton";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <main className="max-w-6xl mx-auto px-5">
-      <Hero />
+    <>
+      <main className="max-w-6xl mx-auto px-5">
+        <Hero />
 
-      <WalletCard />
+        <WalletCard />
 
-      <StatsCards />
+        <StatsCards />
 
-      <SavingsGoal />
+        <SavingsGoal />
 
-      <RecentTransactions />
-    </main>
+        <ExpenseChart />
+
+        <RecentTransactions />
+      </main>
+
+      <Footer />
+
+      <FloatingButton />
+    </>
   );
 };
 
