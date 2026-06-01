@@ -1,39 +1,58 @@
-const RecentTransactions = () => {
-  const data = [
-    {
-      title: "Food",
-      amount: "-₹250",
-      color: "text-red-400",
-    },
-    {
-      title: "Salary",
-      amount: "+₹5000",
-      color: "text-emerald-400",
-    },
-    {
-      title: "Petrol",
-      amount: "-₹400",
-      color: "text-red-400",
-    },
-  ];
+const transactions = [
+  {
+    title: "Salary",
+    amount: "+₹5,000",
+    color: "text-emerald-500",
+  },
+  {
+    title: "Food",
+    amount: "-₹250",
+    color: "text-red-500",
+  },
+  {
+    title: "Petrol",
+    amount: "-₹400",
+    color: "text-red-500",
+  },
+];
 
+const RecentTransactions = () => {
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 mt-8">
-      <h2 className="text-white text-xl font-semibold mb-5">
+    <div
+      className="
+      bg-zinc-950
+      border
+      border-zinc-800
+      rounded-3xl
+      mt-8
+      p-6
+      "
+    >
+      <h2 className="text-xl font-semibold text-white mb-6">
         Recent Transactions
       </h2>
 
-      {data.map((item, index) => (
+      {transactions.map((transaction, index) => (
         <div
           key={index}
-          className="flex justify-between py-3 border-b border-slate-800"
+          className="
+          flex
+          justify-between
+          items-center
+          py-4
+          border-b
+          border-zinc-800
+          last:border-none
+          "
         >
-          <span className="text-slate-300">
-            {item.title}
+          <span className="text-zinc-300">
+            {transaction.title}
           </span>
 
-          <span className={item.color}>
-            {item.amount}
+          <span
+            className={`font-semibold ${transaction.color}`}
+          >
+            {transaction.amount}
           </span>
         </div>
       ))}

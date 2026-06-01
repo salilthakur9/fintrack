@@ -5,7 +5,7 @@ import RecentTransactions from "../components/RecentTransactions";
 
 const Home = () => {
   return (
-    <div className="max-w-6xl mx-auto px-5">
+    <main className="max-w-6xl mx-auto px-5">
       <Hero />
 
       <WalletCard />
@@ -13,7 +13,7 @@ const Home = () => {
       <StatsCards />
 
       <RecentTransactions />
-    </div>
+    </main>
   );
 };
 

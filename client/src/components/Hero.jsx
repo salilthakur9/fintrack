@@ -2,18 +2,20 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="text-center py-16">
+    <section className="py-20 text-center">
       <motion.h1
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="text-5xl font-bold text-white"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-5xl md:text-7xl font-extrabold text-white"
       >
-        Track Every Rupee 💰
+        Take Control Of
+        <span className="text-cyan-400"> Your Money</span>
       </motion.h1>
 
-      <p className="text-slate-400 mt-4 text-lg">
-        Manage expenses, savings goals and
-        visualize your spending.
+      <p className="text-zinc-400 mt-6 text-lg max-w-2xl mx-auto">
+        Track expenses, monitor savings goals and understand
+        where every rupee goes.
       </p>
     </section>
   );
